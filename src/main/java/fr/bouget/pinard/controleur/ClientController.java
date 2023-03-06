@@ -55,7 +55,7 @@ public class ClientController {
 	 */
 	@PostMapping("/add")
 	@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_CREATOR')")
-	public ResponseEntity<Client> createMovie(@RequestBody Client newClient) {
+	public ResponseEntity<Client> createClient(@RequestBody Client newClient) {
 		return ResponseEntity.ok(clientRepository.saveAndFlush(newClient));
 	}
 
